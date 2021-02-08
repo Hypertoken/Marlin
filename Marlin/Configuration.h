@@ -1317,7 +1317,7 @@
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
-#define RESTORE_LEVELING_AFTER_G28
+//#define RESTORE_LEVELING_AFTER_G28
 //#define ENABLE_LEVELING_AFTER_G28
 
 /**
@@ -1856,7 +1856,7 @@
  * just remove some extraneous menu items to recover space.
  */
 //#define NO_LCD_MENUS
-//#define SLIM_LCD_MENUS
+#define SLIM_LCD_MENUS
 
 //
 // ENCODER SETTINGS
