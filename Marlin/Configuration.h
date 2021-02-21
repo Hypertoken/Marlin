@@ -495,9 +495,12 @@
     #define DEFAULT_Ki_LIST {   6.33,   6.33 }
     #define DEFAULT_Kd_LIST {  95.60,  95.60 }
   #else
-    #define DEFAULT_Kp 49.19
-    #define DEFAULT_Ki  6.33
-    #define DEFAULT_Kd 95.60
+  //  #define DEFAULT_Kp 49.19
+  //  #define DEFAULT_Ki  6.33
+  //  #define DEFAULT_Kd 95.60
+  #define DEFAULT_Kp 21.89
+  #define DEFAULT_Ki 1.23
+  #define DEFAULT_Kd 97.72
   #endif
 #endif // PIDTEMP
 
@@ -518,7 +521,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -536,9 +539,12 @@
 
   // ANET A8
   // original Bed + 0.3mm Heat conducting into 4mm borosilicate (PID-Autotune: M303 E-1 S60 C5):
-  #define DEFAULT_bedKp 22.20
-  #define DEFAULT_bedKi 1.08
-  #define DEFAULT_bedKd 114.00
+  #define DEFAULT_bedKp 199.89
+  #define DEFAULT_bedKi 35.36
+  #define DEFAULT_bedKd 753.26
+  //#define DEFAULT_bedKp 22.20
+  //#define DEFAULT_bedKi 1.08
+  //#define DEFAULT_bedKd 114.00
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
 
@@ -1405,10 +1411,10 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-//#define LEVEL_BED_CORNERS
+#define LEVEL_BED_CORNERS
 
 #if ENABLED(LEVEL_BED_CORNERS)
-  #define LEVEL_CORNERS_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
+  #define LEVEL_CORNERS_INSET_LFRB { PROBING_MARGIN, PROBING_MARGIN, PROBING_MARGIN, PROBING_MARGIN } // (mm) Left, Front, Right, Back insets
   #define LEVEL_CORNERS_HEIGHT      0.0   // (mm) Z height of nozzle at leveling points
   #define LEVEL_CORNERS_Z_HOP       4.0   // (mm) Z height of nozzle between leveling points
   //#define LEVEL_CENTER_TOO              // Move to the center after the last corner
@@ -1811,7 +1817,7 @@
  * just remove some extraneous menu items to recover space.
  */
 //#define NO_LCD_MENUS
-//#define SLIM_LCD_MENUS
+#define SLIM_LCD_MENUS
 
 //
 // ENCODER SETTINGS
