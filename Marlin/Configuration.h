@@ -1235,12 +1235,12 @@
 #define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -13
-#define Y_MIN_POS -21
+#define X_MIN_POS -9
+#define Y_MIN_POS -28
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE + 5
 #define Y_MAX_POS Y_BED_SIZE + 13
-#define Z_MAX_POS 250
+#define Z_MAX_POS 285
 
 /**
  * Software Endstops
@@ -2687,7 +2687,7 @@
 #define NEOPIXEL_LED
 #if ENABLED(NEOPIXEL_LED)
   #define NEOPIXEL_TYPE   NEO_GRBW // NEO_GRBW / NEO_GRB - four/three channel driver type (defined in Adafruit_NeoPixel.h)
-  #define NEOPIXEL_PIN     25       // LED driving pin
+  //#define NEOPIXEL_PIN     25       // LED driving pin
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
   #define NEOPIXEL_PIXELS 30       // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
@@ -2723,7 +2723,7 @@
  *  - Turn off after the print has finished and the user has pushed a button
  */
 #if ANY(BLINKM, RGB_LED, RGBW_LED, PCA9632, PCA9533, NEOPIXEL_LED)
-  #define PRINTER_EVENT_LEDS
+  //#define PRINTER_EVENT_LEDS
 #endif
 
 /**
